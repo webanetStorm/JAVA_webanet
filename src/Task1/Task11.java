@@ -16,19 +16,9 @@ public class Task11
         System.out.print( "Введите количество юаней: " );
 
         int yuan = input.nextInt();
-        double roubles = ConvertYuanToRubles( yuan );
+        double roubles = ROUBLES_PER_YUAN * yuan;
 
-        System.out.println( "Результат: " + RoundMoney( roubles ) + " руб" );
-    }
-
-    private static double ConvertYuanToRubles( int yuan )
-    {
-        return ROUBLES_PER_YUAN * yuan;
-    }
-
-    private static double RoundMoney( double value )
-    {
-        return Math.ceil( value );
+        System.out.println( "Результат: " + Math.ceil( roubles ) + " руб" );
     }
 
 }

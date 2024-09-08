@@ -16,16 +16,10 @@ public class Task12
         System.out.print( "Введите количество юаней: " );
 
         int yuan = input.nextInt();
-        double roubles = ROUBLES_PER_YUAN * yuan, roundRubles = RoundMoney( roubles );
-
+        double roubles = ROUBLES_PER_YUAN * yuan, roundRubles = Math.ceil( roubles );
         String[] endingsYuan = GetEndings( yuan ), endingsRouble = GetEndings( (int)roundRubles );
 
         System.out.println( "Результат: " + yuan + " китайск" + endingsYuan[0] + " юан" + endingsYuan[1] + " = " + roundRubles + " российск" + endingsRouble[0] + " рубл" + endingsRouble[1] );
-    }
-
-    private static double RoundMoney( double value )
-    {
-        return Math.ceil( value );
     }
 
     private static String[] GetEndings( double value )
