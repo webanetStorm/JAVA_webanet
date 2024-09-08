@@ -11,13 +11,13 @@ public class Task11
 
     public static void main( String[] args )
     {
-        int yuan;
-        double roubles;
         Scanner input = new Scanner( System.in );
 
         System.out.print( "Введите количество юаней: " );
-        yuan = input.nextInt();
-        roubles = ConvertYuanToRubles( yuan );
+
+        int yuan = input.nextInt();
+        double roubles = ConvertYuanToRubles( yuan );
+
         System.out.println( "Результат: " + RoundMoney( roubles ) + " руб" );
     }
 
