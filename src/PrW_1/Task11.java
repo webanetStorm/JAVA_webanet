@@ -1,4 +1,4 @@
-package Task1;
+package PrW_1;
 
 import java.util.Scanner;
 
