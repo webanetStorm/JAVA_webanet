@@ -42,7 +42,7 @@ public class Car
         this._year = year;
     }
 
-    public void Echo()
+    public void ToString()
     {
         System.out.println( "Модель: " + _model );
         System.out.println( "Номер: " + _license );
