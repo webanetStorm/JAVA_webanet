@@ -3,8 +3,12 @@ package PrW_7.task4;
 
 interface Colorable
 {
+
     void howToColor();
+
 }
+
+
 
 abstract class GeometricObject implements Comparable<GeometricObject>
 {
@@ -122,6 +126,8 @@ class Square extends GeometricObject implements Colorable
     }
 
 }
+
+
 
 class ComparableCircle extends GeometricObject
 {
