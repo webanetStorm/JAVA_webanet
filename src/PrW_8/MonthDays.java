@@ -23,8 +23,13 @@ public class MonthDays
             if ( monthIndex == 1 )
             {
                 System.out.print( "Введите год: " );
+                int yearInp = scanner.nextInt();
 
-                if ( isLeapYear( scanner.nextInt() ) )
+                if ( yearInp <= 0 )
+                {
+                    throw new InputMismatchException( "Некорректный год" );
+                }
+                else
                 {
                     daysInMonth[monthIndex] = 29;
                 }
@@ -39,7 +44,7 @@ public class MonthDays
         }
         catch ( InputMismatchException e )
         {
-            System.out.println( "Введите целое число" );
+            System.out.println( "Некорректный ввод" );
         }
     }
 
