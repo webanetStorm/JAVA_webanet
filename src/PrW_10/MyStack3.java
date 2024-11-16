@@ -22,11 +22,17 @@ public class MyStack3 implements Cloneable
 
     public Object peek()
     {
+        if ( isEmpty() )
+            return null;
+
         return this.list.get( getSize() - 1 );
     }
 
     public Object pop()
     {
+        if ( isEmpty() )
+            return null;
+
         return this.list.remove( getSize() - 1 );
     }
 
