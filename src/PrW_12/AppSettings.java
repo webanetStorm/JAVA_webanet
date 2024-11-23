@@ -19,7 +19,7 @@ public class AppSettings
         settings = new ConcurrentHashMap<>();
     }
 
-    public static AppSettings getInstance()
+    public static AppSettings i()
     {
         if ( instance == null )
         {
@@ -51,21 +51,21 @@ public class AppSettings
 
         Runnable task1 = () ->
         {
-            AppSettings settings = AppSettings.getInstance();
+            AppSettings settings = AppSettings.i();
             settings.setSetting( "Theme", "Dark" );
             System.out.println( "Task1 - Theme: " + settings.getSetting( "Theme" ) );
         };
 
         Runnable task2 = () ->
         {
-            AppSettings settings = AppSettings.getInstance();
+            AppSettings settings = AppSettings.i();
             settings.setSetting( "Language", "English" );
             System.out.println( "Task2 - Language: " + settings.getSetting( "Language" ) );
         };
 
         Runnable task3 = () ->
         {
-            AppSettings settings = AppSettings.getInstance();
+            AppSettings settings = AppSettings.i();
             System.out.println( "Task3 - Theme: " + settings.getSetting( "Theme" ) );
             System.out.println( "Task3 - Language: " + settings.getSetting( "Language" ) );
         };
